@@ -1,0 +1,302 @@
+/* Algemene stijlen */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #000000;
+    line-height: 1.6;
+    text-align: center;
+    overflow-x: hidden; 
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background: #ffffff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+header h1 {
+    color: #009688; 
+    font-size: 24px;
+    font-weight: 600;
+}
+
+header h1:hover {
+    color: #004d40; 
+}
+
+/* Hamburger icoon */
+.hamburger {
+    font-size: 25px;
+    cursor: pointer;
+    display: none; 
+    color: #009688; 
+}
+
+/* Navigatiemenu */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 40px;
+}
+
+nav ul li a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #009688;
+}
+
+/* Hero sectie */
+.hero {
+    text-align: center;
+    padding: 120px 20px;
+    background: linear-gradient(135deg, #e3f2f1, #ffffff);
+}
+
+.hero h2 {
+    font-size: 42px;
+    font-weight: 600;
+    color: #009688;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #000000;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+/* Secties - Algemeen */
+section {
+    padding: 80px 5%;
+    text-align: center;
+    background: #ffffff;
+    color: #000000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    margin-top: 40px;
+    border-radius: 10px;
+}
+
+section h2 {
+    color: #009688;
+}
+
+/* Skills */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.skill {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.skill:hover {
+    transform: translateY(-5px);
+    background: #e0f7fa;
+}
+
+.skill span {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #009688;
+}
+
+/* Procentbalk */
+.bar {
+    background: #e0e0e0;
+    height: 12px;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.fill {
+    height: 100%;
+    background: #009688;
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+.skill:hover .fill {
+    width: 100%;
+}
+
+/* Projecten */
+.projects-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.project-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card h3 {
+    margin-bottom: 10px;
+    color: #009688;
+}
+
+.project-card p {
+    font-size: 14px;
+    color: #000000;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Contactsectie */
+#contact h2 {
+    font-size: 28px;
+    color: #009688;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form input, form textarea {
+    width: 70%;
+    margin: 10px 0;
+    padding: 12px;
+    background: #ffffff;
+    border: 1px solid #000000;
+    color: #000000;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form textarea {
+    height: 120px;
+    resize: none;
+}
+
+form button {
+    background: #009688;
+    color: #ffffff;
+    padding: 12px 18px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background: #004d40;
+}
+
+/* Contact bevestiging */
+#confirmation {
+    font-size: 16px;
+    color: #009688;
+    margin-top: 15px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #ffffff;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #000000;
+}
+
+/* Responsieve stijlen */
+@media screen and (min-width: 1024px) {
+    header h1 {
+        font-size: 30px;
+    }
+    nav ul li {
+        margin-left: 80px;
+    }
+    .hero h2 {
+        font-size: 42px;
+    }
+    .hero p {
+        font-size: 20px;
+    }
+    section {
+        padding: 100px 10%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .hamburger {
+        display: block; 
+        position: absolute;
+        right: 30px; 
+        top: 26px;
+    }
+
+    nav ul {
+        display: none; 
+        width: 22%; 
+        flex-direction: column;
+        text-align: left;
+        background: #ffffff;
+        position: absolute;
+        top: 70px; 
+        left: 0;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    nav ul li {
+        margin-left: 0;
+        padding: 10px 20px;
+    }
+
+    nav ul li a {
+        font-size: 18px;
+    }
+
+    nav ul li a:hover {
+        color: #009688;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <p>  <!-- (kan je in de p zetten voor de message van het "laden van de backend") id="message" -->
+        <header>
+            <h1>Portfolio</h1>
+            <nav>
+                <div class="hamburger" onclick="toggleMenu()">
+                    &#9776; 
+                </div>
+                <ul id="menu" class="hidden">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                </ul>
+            </nav>
+        </header>
+    
+        <section id="home">
+            <div class="hero">
+                <h2>Welkom op mijn portfolio</h2>
+            </section>
+            </div>
+    
+        <section id="about">
+            <h2>Over mij</h2>
+        </section>
+            <p>
+                Ik ben Milan Kwanten, een 18-jarige jongen die graag bezig is met fitness en die de droom heeft om politieagent te worden. 
+                Mijn uiteindelijke doel is om inspecteur te worden. Ik ben erg geïnteresseerd in het werk van de politie, zowel het fysieke als het denken en oplossen van problemen.
+                <br>
+                Daarnaast heb ik ervaring met verschillende programmeertalen. Ik vind het leuk om met technologie te werken en denk dat ik met deze kennis ook iets kan betekenen in mijn toekomstige werk als inspecteur.
+                <br>
+                Ik ben gemotiveerd, houd van uitdagingen en wil mezelf blijven verbeteren in alles wat ik doe.
+            </p>
+
+        <section id="skills">
+            <h2>Skills</h2>
+        </section>
+            <div class="skills-container">
+                <div class="skill"><span>HTML</span><div class="bar"><div class="fill" style="width: 75%;"></div></div></div>
+                <div class="skill"><span>CSS</span><div class="bar"><div class="fill" style="width: 70%;"></div></div></div>
+                <div class="skill"><span>JavaScript</span><div class="bar"><div class="fill" style="width: 70%;"></div></div></div>
+                <div class="skill"><span>C#</span><div class="bar"><div class="fill" style="width: 60%;"></div></div></div>
+                <div class="skill"><span>SQL</span><div class="bar"><div class="fill" style="width: 65%;"></div></div></div>
+                <div class="skill"><span>Python</span><div class="bar"><div class="fill" style="width: 70%;"></div></div></div>
+            </div>
+    
+        <section id="projects">
+            <h2>Projects</h2>
+        </section>
+            <div class="projects-container">
+                <div class="project-card">
+                    <h3>Project 1</h3>
+                    <p>Korte beschrijving van het project...</p>
+                </div>
+                <div class="project-card">
+                    <h3>Project 2</h3>
+                    <p>Korte beschrijving van het project...</p>
+                </div>
+                <div class="project-card">
+                    <h3>Project 3</h3>
+                    <p>Korte beschrijving van het project...</p>
+                </div>
+            </div>
+    
+        <section id="contact">
+            <h2>Contact</h2>
+        </section>
+            <form id="contact-form">
+                <input type="text" id="name" placeholder="Je naam" required>
+                <input type="email" id="email" placeholder="Je e-mail" required>
+                <textarea id="bericht" placeholder="Je bericht" required></textarea>
+                <button type="submit">Verstuur</button>
+            </form>
+            <p id="confirmation" style="display: none;">Bedankt voor je bericht!</p>
+    
+        <footer>
+             <p> &copy; Milan Kwanten <span id="jaar"></span> </p>
+        </footer>
+        
+    <script>
+        document.getElementById("jaar").textContent = new Date().getFullYear();
+
+    
+    function toggleMenu() {
+        const navLinks = document.querySelector('nav ul'); 
+        navLinks.classList.toggle('show'); 
+    }
+
+    const navItems = document.querySelectorAll('nav ul li a');
+    navItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const navLinks = document.querySelector('nav ul');
+            navLinks.classList.remove('show'); 
+        });
+    });
+    </script>
+    
+    </p>
+</body>
+</html>
